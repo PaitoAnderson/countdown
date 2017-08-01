@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Countdown Test</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
+    <script src="countdown.js"></script>
+    <style>
+        .countdown {
+            color: green;
+            font-weight: bold;
+        }
+        .countdown-one-minute {
+            color:red;
+        }
+        .countdown-five-minutes {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p>1 Minute: <span id="countdown1" class="countdown" /></p>
+    <p>5 Minutes: <span id="countdown2" class="countdown" /></p>
+    <p>10 Minutes: <span id="countdown3" class="countdown" /></p>
+    <script>
+         $("#countdown1").countdown({
+            date: new Date(new Date().getTime() + 60000),
+            text: "%dd %hh %mm %ss"
+        });
+        $("#countdown2").countdown({
+            date: new Date(new Date().getTime() + 5*60000),
+            text: "%dd %hh %mm %ss"
+        });
+        $("#countdown3").countdown({
+            date: new Date(new Date().getTime() + 10*60000),
+            text: "%dd %hh %mm %ss"
+        });
+    </script>
+</body>
+</html>
