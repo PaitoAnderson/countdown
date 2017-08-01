@@ -161,6 +161,14 @@
         },
 
         update: function () {
+
+            if (this.minutes < 1) {
+                this.$element.addClass("countdown-one-minute");
+                this.$element.removeClass("countdown-five-minutes");
+            } else if (this.minutes < 5) {
+                 this.$element.addClass("countdown-five-minutes");
+            }
+
             if (--this.seconds >= 0) {
                 this.output("seconds");
             } else {
