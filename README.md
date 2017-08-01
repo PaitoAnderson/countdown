@@ -85,7 +85,7 @@ The target date, allow date object, time number (milliseconds) and valid date st
 * type: boolean
 * default: false
 
-Set it `true` to update the date number per one tenth second.
+Set it to `true` to update the date number per one tenth second.
 
 
 #### end
@@ -99,11 +99,18 @@ The function will be run when the countdown end.
 #### text
 
 * type: string
-* default: "%s days, %s hours, %s minutes, %s seconds"
+* default: "%d days, %h hours, %m minutes, %s seconds"
 
-Just a text template, you can customize it, e.g., "%s D / %s H / %s M / %s S".
+Just a text template, you can customize it, e.g., "%d D / %h H / %m M / %s S" or "%m min / %s sec" .
 
 
+#### pad
+
+* type: boolean
+* default: false
+
+Set it to `true` to pad numbers with a leading 0, e.g., "10 H / 9 M / 5 S" becomes "10 H / 09 M / 05 S"
+ 
 
 ## Methods
 
